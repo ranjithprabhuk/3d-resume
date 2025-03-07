@@ -259,13 +259,6 @@ function loadContent() {
     // Create 3D card for this education
     createEducationCard(edu, index);
   });
-
-  // Load Contact section
-  document.getElementById('email-link').href = `mailto:${resumeData.personal.email}`;
-  document.getElementById('linkedin-link').href = resumeData.personal.linkedin;
-  document.getElementById('github-link').href = resumeData.personal.github;
-  document.getElementById('website-link').href = resumeData.personal.website;
-  document.getElementById('phone-link').href = `tel:${resumeData.personal.phone}`;
 }
 
 // Create 3D experience card
@@ -516,11 +509,6 @@ function setupEventListeners() {
       const section = this.dataset.section;
       navigateToSection(section);
     });
-  });
-
-  // Close modal button
-  document.querySelector('.close-modal').addEventListener('click', function () {
-    document.getElementById('modal').style.display = 'none';
   });
 
   // Mouse move for raycasting
